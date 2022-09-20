@@ -12,6 +12,7 @@
         "fakerphp/faker": "^1.19",
         "phpdocumentor/reflection-docblock": "^5.3",
         "sensio/framework-extra-bundle": "^6.1",
+        "symfony/apache-pack": "^1.0",
         "symfony/asset": "5.1.*",
         "symfony/console": "5.1.*",
         "symfony/doctrine-messenger": "5.1.*",
@@ -82,6 +83,10 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+
+        "compile":[
+            "php bin/console doctrine:migrations:migrate"
         ]
     },
     "conflict": {
